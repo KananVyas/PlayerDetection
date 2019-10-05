@@ -45,7 +45,7 @@ while success:
 	
 
     #find contours in threshold image     
-	im2,contours,hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+	contours,hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
 	
 
 	prev = 0
@@ -104,7 +104,7 @@ while success:
 
 
 	cv2.imwrite("./Cropped/frame%d.jpg" % count, res)
-	print 'Read a new frame: ', success     # save frame as JPEG file	
+	print ('Read a new frame: ', success)     # save frame as JPEG file	
 	count += 1
 	cv2.imshow('Match Detection',image)
 	if cv2.waitKey(1) & 0xFF == ord('q'):
