@@ -104,7 +104,7 @@ while success:
 
 
 	cv2.imwrite("./Cropped/frame%d.jpg" % count, res)
-	print 'Read a new frame: ', success     # save frame as JPEG file	
+	print ('Read a new frame: ', success)     # save frame as JPEG file	
 	count += 1
 	cv2.imshow('Match Detection',image)
 	if cv2.waitKey(1) & 0xFF == ord('q'):
